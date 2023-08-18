@@ -41,6 +41,10 @@ void loop() {
   
   // Convertendo a leitura do sensor para o valor de umidade (Porcentagem)
   input = map(ValorUmidade, 0, 1023, 0, 100);
+
+  // Imprimindo o valor da Umidade do Solo
+  Serial.print(input);
+
   
   // Controlador PID
   PID = CalculaPID(erro, input, setpoint, UltimaLeituraSensor, P, I, D);
